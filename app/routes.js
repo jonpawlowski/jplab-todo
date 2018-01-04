@@ -31,7 +31,6 @@ module.exports = function (app) {
 			start_date: req.body.start_date,
 			completed_date: req.body.completed_date,
 			priority: req.body.priority,
-            done: false
         }, function (err, todo) {
             if (err)
                 res.send(err);
