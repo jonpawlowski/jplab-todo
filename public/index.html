@@ -1,7 +1,7 @@
 <!doctype html>
 
 <!-- ASSIGN OUR ANGULAR MODULE -->
-<html ng-app="scotchTodo">
+<html ng-app="jplab-todo">
 <head>
 	<!-- META -->
 	<meta charset="utf-8">
@@ -27,6 +27,27 @@
 	<script src="js/core.js"></script> <!-- load our main application -->
 
 </head>
+<!--CONTAINER-->
+<div class="container">
+    <div class="row">
+
+        <!--TITLE-->
+        <h2 class="text-primary col-12">
+            JP Lab Todo List
+            <span class="title-info">getting things done since 1980</span>
+        </h2>
+        
+        <!--ROW-->
+        <div class="col-12">
+            <hr>
+        </div>
+
+        <!--Todo DATA SECTION-->
+        <div class="col-12">
+            <h4>Todo List</h4>
+        </div>
+	</div>
+</div>
 <!-- SET THE CONTROLLER -->
 <body ng-controller="mainController">
 	<div class="container">
