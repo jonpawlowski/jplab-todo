@@ -53,19 +53,14 @@
 <body ng-controller="mainController">
 	<div class="container">
 
-		<!-- HEADER AND TODO COUNT -->
-		<div class="jumbotron text-center">
-			<h1>JP Lab Todo List</h1>
-		</div>
-
 		        <!--FORM Todo DATA-->
-        <form class="col-12">
+        <form id="todo-form" class="col-12">
             <div class="row col-12">
 
                 <!--TITLE INPUT-->
                 <div class="col-md-2 col-sm-6">
                     <label><b>Title</b></label>
-                    <input class="form-control" ng-model="title" required>
+                    <input class="form-control" ng-model="formData.title" required>
                     <p class="text-danger">
                     *required
                     </p>
@@ -74,7 +69,7 @@
 				<!--DESCRIPTION INPUT-->
                 <div class="col-md-3 col-sm-6">
                     <label><b>Description</b></label>
-                    <textarea  class="form-control" ng-model="description" required></textarea>
+                    <textarea  class="form-control" ng-model="formData.description" required></textarea>
                     <p [hidden]="deskripsiInput.valid" class="text-danger">
                     *required
                     </p>
@@ -83,7 +78,7 @@
 				<!--DATE STARTED INPUT-->
                 <div class="col-md-2 col-sm-6">
                     <label><b>Date Started</b></label>
-                    <input class="form-control" ng-model="start_date" required>
+                    <input class="form-control" ng-model="formData.start_date" required>
                     <p [hidden]="tgl_mulaiInput.valid" class="text-danger">
                     *required
                     </p>
@@ -92,7 +87,7 @@
                 <!--DATE COMPLETED INPUT-->
                 <div class="col-md-2 col-sm-6">
                     <label><b>Date Completed</b></label>
-                    <input class="form-control" ng-model="completed_date">
+                    <input class="form-control" ng-model="formData.completed_date">
                     <p [hidden]="tgl_selesaiInput.valid" class="text-danger">
                     </p>
                 </div>
@@ -100,7 +95,7 @@
                 <!--PRIORITY INPUT-->
                 <div class="col-md-2">
                     <label><b>Priority</b></label>
-                    <select name='priority' ng-Model="priority" class='form-control' required>
+                    <select name='priority' ng-Model="formData.priority" class='form-control' required>
                         <option ng-Value="1" [selected]="priority == 1">High</option>
                         <option ng-Value="2" [selected]="priority == 2">Medium</option>
                         <option ng-Value="3" [selected]="priority == 3">Low</option>
