@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
 
-	<title>JP Lab Todo App</title>
+	<title>JP Lab Todo List</title>
 
 	<!-- SCROLLS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
@@ -58,6 +58,31 @@
 			<h1>JP Lab Todo List</h1>
 		</div>
 
+		        <!--FORM Todo DATA-->
+        <form class="col-12" (ngSubmit)="submit()">
+            <div class="row col-12">
+
+                <!--TITLE INPUT-->
+                <div class="col-md-2 col-sm-6">
+                    <label><b>Title</b></label>
+                    <input class="form-control" required>
+                    <p class="text-danger">
+                    *required
+                    </p>
+                </div>
+
+                <!--SUBMIT BUTTON-->
+                <div class="col-md-1">
+                    <label><b>Action</b></label><br>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </div>
+
+            <p [hidden]="showError" class="text-danger text-center"><b>There is an error</b></p>
+        </form>
+        <!--END OF FORM-->
+		
 		<!-- FORM TO CREATE TODOS -->
 		<div id="todo-form" class="row">
 			<div class="col-sm-8 col-sm-offset-2 text-center">
@@ -65,7 +90,6 @@
 					<div class="form-group">
 
 						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-						<input type="text" class="form-control input-lg text-center">
 						<input type="text" class="form-control input-lg text-center" placeholder="Enter item here" ng-model="formData.text">
 					</div>
 

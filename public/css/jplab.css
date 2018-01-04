@@ -18,7 +18,7 @@ $grey : #666;
 
 .title-info {
     font-size: 20px;
-    color: $grey;
+    color: grey;
 }
 
 .edit-button {
@@ -41,7 +41,7 @@ label {
     border: 1px solid transparent;
     min-width: 10px;
     line-height: 1;
-    color: $white;
+    color: white;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -54,15 +54,15 @@ label {
 }
 
 .badge.badge-danger {
-  background-color: $color-danger
+  background-color: color-danger
 }
 
 .badge.badge-success {
-    background-color: $color-success
+    background-color: color-success
 }
 
 .badge.badge-warning {
-    background-color: $color-warning
+    background-color: color-warning
 }
 
 .status {
@@ -86,9 +86,9 @@ label {
 }
 
 .ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid $color-success;
+  border-left: 5px solid color-success;
 }
 
 .ng-invalid:not(form)  {
-  border-left: 5px solid $color-danger;
+  border-left: 5px solid color-danger;
 }
