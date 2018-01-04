@@ -83,8 +83,7 @@
 				<!--DATE STARTED INPUT-->
                 <div class="col-md-2 col-sm-6">
                     <label><b>Date Started</b></label>
-                    <my-date-picker name="tgl_mulai" [options]="myDatePickerOptions"
-                        ng-model="start_date" required></my-date-picker>
+                    <input class="form-control" ng-model="start_date" required>
                     <p [hidden]="tgl_mulaiInput.valid" class="text-danger">
                     *required
                     </p>
@@ -93,8 +92,7 @@
                 <!--DATE COMPLETED INPUT-->
                 <div class="col-md-2 col-sm-6">
                     <label><b>Date Completed</b></label>
-                    <my-date-picker name="tgl_selesai" [options]="myDatePickerOptions"
-                        ng-model="completed_date"></my-date-picker>
+                    <input class="form-control" ng-model="completed_date">
                     <p [hidden]="tgl_selesaiInput.valid" class="text-danger">
                     </p>
                 </div>
