@@ -116,7 +116,7 @@
 
             </div>
 
-            <p [hidden]="showError" class="text-danger text-center"><b>There is an error</b></p>
+            <!-- add later <p [hidden]="showError" class="text-danger text-center"><b>There is an error</b></p>-->
 		</form>
     
         <!--END OF FORM-->
@@ -132,6 +132,14 @@
 		</div>
 		
 		<div class="row col-12 list" ng-repeat="todo in todos">
+			
+			<!--DATA STATUS-->
+			<div class="col-md-1">
+				<label>Status :</label>
+				<button ng-If="todo.status" class="btn btn-sm btn-success" >Done</button>
+				<button ng-If="!todo.status" class="btn btn-sm btn-danger" >In progress</button>
+			</div>
+			
 			<!--DATA TITLE-->
 			<div class="col-md-2 col-sm-6">
 				<label>Title :</label>
