@@ -74,7 +74,10 @@
 				<!--DATE STARTED INPUT-->
                 <div class="col-md-2 col-sm-6">
                     <label><b>Date Started</b></label>
-                    <input class="form-control" ng-model="formData.start_date" required>
+                    <datepicker>
+						<input ng-model="formData.start_date" type="text" required/>
+					</datepicker>
+					<!--<input class="form-control" ng-model="formData.start_date" required>-->
                     <p [hidden]="tgl_mulaiInput.valid" class="text-danger">
                     *required
                     </p>
