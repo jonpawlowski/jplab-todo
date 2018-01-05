@@ -1,1 +1,1 @@
-angular.module('jplabTodo', ['todoController', 'todoService']);
+angular.module('jplabTodo', ['todoController', 'todoService','720kb.datepicker']);
