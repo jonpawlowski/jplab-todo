@@ -116,23 +116,51 @@
         </form>
         <!--END OF FORM-->
 		
-		<!-- TODO LIST -->
-		<div id="todo-list" class="row">
-			<div class="col-sm-4 col-sm-offset-4">
+		<!--ROW BETWEEN FORM AND DATA-->
+		<div class="col-12">
+			<hr>
+		</div>
+	
+	<div class="row col-12 list" ng-repeat="todo in todos">
+		<!--DATA TITLE-->
+		<div class="col-md-2 col-sm-6">
+			<label>Title :</label>
+			<div>
+				{{todo.title}}
+			</div>
+		</div>
 
-				
+		<!--DATA DESCRIPTION-->
+		<div class="col-md-2 col-sm-6">
+			<label>Description :</label>
+			<div>
+				{{todo.description}}
+			</div>
+		</div>
 
-				<!-- LOOP OVER THE TODOS IN $scope.todos -->
-				<div class="checkbox" ng-repeat="todo in todos">
-					<label>
-						<input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
-					</label>
-				</div>
+		<!--DATA DATE STARTED-->
+		<div class="col-md-2 col-sm-6">
+			<label>Date Started :</label>
+			<div>
+				{{todo.data_started}}
+			</div>
+		</div>
 
-				<p class="text-center" ng-show="loading">
-					<span class="fa fa-spinner fa-spin fa-3x"></span>
-				</p>
+		<!--DATA DATE COMPLETED-->
+		<div class="col-md-2 col-sm-6">
+			<label>Date Completed :</label>
+			<div>
+				{{todo.data_completed}}
+			</div>
+		</div>
 
+		<!--DATA PRIORITY-->
+		<div class="col-md-2 col-sm-6">
+			<label>Priority :</label>
+			<div>
+				<div *ngIf="todo.priority == 1" class="badge badge-danger">High</div>
+				<div *ngIf="todo.priority == 2" class="badge badge-warning">Medium</div>
+				<div *ngIf="todo.priority == 3" class="badge badge-primary">Low</div>
 			</div>
 		</div>
 
