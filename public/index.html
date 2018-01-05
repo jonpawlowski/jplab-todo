@@ -5,16 +5,15 @@
 <head>
 	<!-- META -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
 
 	<title>JP Lab Todo List</title>
 
 	<!-- SCROLLS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-	<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/angular-datepicker.css" type="text/css" />
-	<link rel="stylesheet" href="css/jplab.css">
+	<!--<link rel="stylesheet" href="css/jplab.css">-->
 	
 	<style>
 		html 					{ overflow-y:scroll; }
@@ -170,9 +169,9 @@
 		<div class="col-md-2 col-sm-6">
 			<label>Priority :</label>
 			<div>
-				<span ng-if="todo.priority == '1'" class="badge badge-danger">High</span>
-				<span ng-if="todo.priority == '2'" class="badge badge-warning">Medium</span>
-				<span ng-if="todo.priority == '3'" class="badge badge-success">Low</span>
+				<div ng-if="todo.priority == '1'" class="badge badge-danger">High</div>
+				<div ng-if="todo.priority == '2'" class="badge badge-warning">Medium</div>
+				<div ng-if="todo.priority == '3'" class="badge badge-success">Low</div>
 			</div>
 		</div>
 
