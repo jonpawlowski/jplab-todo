@@ -113,7 +113,8 @@
             </div>
 
             <p [hidden]="showError" class="text-danger text-center"><b>There is an error</b></p>
-        </form>
+	</div>
+    </form>
         <!--END OF FORM-->
 		
 		<!--ROW BETWEEN FORM AND DATA-->
@@ -142,7 +143,7 @@
 		<div class="col-md-2 col-sm-6">
 			<label>Date Started :</label>
 			<div>
-				{{todo.data_started}}
+				{{todo.start_date}}
 			</div>
 		</div>
 
@@ -150,7 +151,7 @@
 		<div class="col-md-2 col-sm-6">
 			<label>Date Completed :</label>
 			<div>
-				{{todo.data_completed}}
+				{{todo.completed_date}}
 			</div>
 		</div>
 
@@ -158,16 +159,16 @@
 		<div class="col-md-2 col-sm-6">
 			<label>Priority :</label>
 			<div>
-				<div *ngIf="todo.priority == 1" class="badge badge-danger">High</div>
-				<div *ngIf="todo.priority == 2" class="badge badge-warning">Medium</div>
-				<div *ngIf="todo.priority == 3" class="badge badge-primary">Low</div>
+				<div *ngIf="{{todo.priority}} == 1" class="badge badge-danger">High</div>
+				<div *ngIf="{{todo.priority}} == 2" class="badge badge-warning">Medium</div>
+				<div *ngIf="{{todo.priority}} == 3" class="badge badge-primary">Low</div>
 			</div>
 		</div>
 
-		<div class="text-center text-muted">
-			<p>A demo by Jon Pawlowski.</p>
-		</div>
-
+	</div>
+	
+	<div class="text-center text-muted">
+		<p>A demo by Jon Pawlowski.</p>
 	</div>
 
 </body>
