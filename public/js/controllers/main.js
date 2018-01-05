@@ -1,7 +1,7 @@
-angular.module('todoController', [])
+angular.module('todoController', ['toaster', 'ngAnimate'])
 
 	// inject the Todo service factory into our controller
-	.controller('mainController', ['$scope','$http','Todos', function($scope, $http, Todos) {
+	.controller('mainController', ['$scope','$http','Todos', function($scope, $http, Todos, toaster) {
 		$scope.formData = {};
 		$scope.loading = true;
 
@@ -28,6 +28,7 @@ angular.module('todoController', [])
 
 					// if successful creation, call our get function to get all the new todos
 					.success(function(data) {
+						toaster.pop('info', "Success", "To Do Item Created");
 						$scope.loading = false;
 						$scope.formData = {}; // clear the form so our user is ready to enter another
 						$scope.todos = data; // assign our new list of todos
