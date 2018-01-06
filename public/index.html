@@ -50,6 +50,7 @@
 </div>
 <!-- SET THE CONTROLLER -->
 <body ng-controller="mainController">
+	<toaster-container toaster-options="{ 'time-out': 3000, 'position-class': 'toast-top-right' }"></toaster-container>
 	<div class="container">
 
 		        <!--FORM Todo DATA-->
@@ -112,7 +113,6 @@
 				
                 <!--SUBMIT BUTTON-->
                 <div class="col-md-1">
-				<toaster-container toaster-options="{ 'time-out': 3000, 'position-class': 'toast-top-right' }"></toaster-container>
                     <label><b>Action</b></label><br>
                     <button type="submit" class="btn btn-primary" ng-click="createTodo()">Submit</button>
                 </div>
