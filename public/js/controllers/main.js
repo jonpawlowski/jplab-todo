@@ -29,7 +29,7 @@ angular.module('todoController', [])
 					// if successful creation, call our get function to get all the new todos
 					.success(function(data) {
 						$scope.loading = false;
-						$scope.pop();
+						$scope.popAdd();
 						$scope.formData = {}; // clear the form so our user is ready to enter another
 						$scope.todos = data; // assign our new list of todos
 					});
@@ -45,12 +45,18 @@ angular.module('todoController', [])
 				// if successful creation, call our get function to get all the new todos
 				.success(function(data) {
 					$scope.loading = false;
+					$scope.popDelete();
 					$scope.todos = data; // assign our new list of todos
 				});
 		};
 		
-		// Display toaster message
-		$scope.pop = function() {
+		// Display toaster message on successful add
+		$scope.popAdd = function() {
 			toaster.pop('success', "Success", "To Do Item Added", 5000);
+		}
+		
+		// Display toaster message on successful deletion
+		$scope.popDelete = function() {
+			toaster.pop('success', "Success", "To Do Item Deleted", 5000);
 		}
 	}]);
