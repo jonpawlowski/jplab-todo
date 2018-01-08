@@ -5,7 +5,7 @@
 <head>
 	<!-- META -->
 	<meta charset="utf-8">
-	<!--<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
 
 	<title>JP Lab Todo List</title>
 
@@ -136,7 +136,7 @@
 		<div class="row col-12 list" ng-repeat="todo in todos">
 			
 			<!--DATA STATUS-->
-			<div class="col-md-2">
+			<div class="col-md-1">
 				<label>Status :</label>
 				<button ng-If="todo.status" class="btn btn-sm btn-success" >Done</button>
 				<button ng-If="!todo.status" class="btn btn-sm btn-danger" >In progress</button>
