@@ -133,69 +133,80 @@
 			<h4>Todo List</h4>
 		</div>
 		
-		<div class="row col-12 list" ng-repeat="todo in todos">
-			
-			<!--DATA STATUS-->
-			<div class="col-md-2">
-				<label>Status :</label>
-				<button ng-If="todo.status" class="btn btn-sm btn-outline-success" >Done</button>
-				<button ng-If="!todo.status" class="btn btn-sm btn-outline-danger" >In progress</button>
-			</div>
-			
-			<!--DATA TITLE-->
-			<div class="col-md-2 col-sm-6">
-				<label>Title :</label>
-				<div>
-					{{todo.title}}
-				</div>
-			</div>
+		<!--DATA SECTION-->
+		<div class="row">
+			<div class="col-12">
 
-			<!--DATA DESCRIPTION-->
-			<div class="col-md-2 col-sm-6">
-				<label>Description :</label>
-				<div>
-					{{todo.description}}
+				<!--DATA SECTION TITLE-->
+				<div class="col-12">
+					<div>
+						<span class="data-title text-left">Todo List </span>
+						<span class="data-desc text-left">Sorted by Priority</span>
+					</div>
 				</div>
-			</div>
+				<div class="row col-12 list" ng-repeat="todo in todos">
+				
+				<!--DATA STATUS-->
+				<div class="col-md-1">
+					<label>Status :</label>
+					<button ng-If="todo.status" class="btn btn-sm btn-outline-success" >Done</button>
+					<button ng-If="!todo.status" class="btn btn-sm btn-outline-danger" >In progress</button>
+				</div>
+				
+				<!--DATA TITLE-->
+				<div class="col-md-2 col-sm-6">
+					<label>Title :</label>
+					<div>
+						{{todo.title}}
+					</div>
+				</div>
 
-			<!--DATA DATE STARTED-->
-			<div class="col-md-2 col-sm-6">
-				<label>Date Started :</label>
-				<div>
-					{{todo.start_date}}
+				<!--DATA DESCRIPTION-->
+				<div class="col-md-2 col-sm-6">
+					<label>Description :</label>
+					<div>
+						{{todo.description}}
+					</div>
 				</div>
-			</div>
 
-			<!--DATA DATE COMPLETED-->
-			<div class="col-md-2 col-sm-6">
-				<label>Date Completed :</label>
-				<div>
-					{{todo.completed_date}}
+				<!--DATA DATE STARTED-->
+				<div class="col-md-2 col-sm-6">
+					<label>Date Started :</label>
+					<div>
+						{{todo.start_date}}
+					</div>
 				</div>
-			</div>
 
-			<!--DATA PRIORITY-->
-			<div class="col-md-2 col-sm-6">
-				<label>Priority :</label>
-				<div>
-					<div ng-if="todo.priority == '1'" class="badge badge-danger">High</div>
-					<div ng-if="todo.priority == '2'" class="badge badge-warning">Medium</div>
-					<div ng-if="todo.priority == '3'" class="badge badge-success">Low</div>
+				<!--DATA DATE COMPLETED-->
+				<div class="col-md-2 col-sm-6">
+					<label>Date Completed :</label>
+					<div>
+						{{todo.completed_date}}
+					</div>
 				</div>
-			</div>
-			
-			<!--ACTION FOR DATA-->
-			<div class="col-md-1 col-sm-6">
-				<label>Action :</label>
-				<!-- add later
-				<div>
-					<button class="btn btn-sm btn-success" (click)="">Save</button>
-				</div>-->
-				<div>
-					<!-- add later <button class="btn btn-sm btn-info" (click)="edit(i)"><img src='assets/edit.png'></button>-->
-					<button class="btn btn-sm btn-basic" ng-click="deleteTodo(todo._id)"><i class="fa fa-archive"></i></button>
+
+				<!--DATA PRIORITY-->
+				<div class="col-md-2 col-sm-6">
+					<label>Priority :</label>
+					<div>
+						<div ng-if="todo.priority == '1'" class="badge badge-danger">High</div>
+						<div ng-if="todo.priority == '2'" class="badge badge-warning">Medium</div>
+						<div ng-if="todo.priority == '3'" class="badge badge-success">Low</div>
+					</div>
 				</div>
-			</div>
+				
+				<!--ACTION FOR DATA-->
+				<div class="col-md-1 col-sm-6">
+					<label>Action :</label>
+					<!-- add later
+					<div>
+						<button class="btn btn-sm btn-success" (click)="">Save</button>
+					</div>-->
+					<div>
+						<!-- add later <button class="btn btn-sm btn-info" (click)="edit(i)"><img src='assets/edit.png'></button>-->
+						<button class="btn btn-sm btn-basic" ng-click="deleteTodo(todo._id)"><i class="fa fa-archive"></i></button>
+					</div>
+				</div>
 			
 			<!--ROW BETWEEN OTHER DATA-->
 			<div class="col-md-12">
@@ -207,6 +218,8 @@
 		<!--SHOW IF DATA EMPTY-->
 		<div ng-If="todos.length == '0'" class="text-center text-danger">
 			Nothing To Do!
+		</div>
+		</div>
 		</div>
 </div>	
 </body>
