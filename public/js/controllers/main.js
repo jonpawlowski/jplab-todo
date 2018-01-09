@@ -20,9 +20,9 @@ angular.module('todoController', [])
 
 			// validate the formData to make sure that something is there
 			// if form is empty, nothing will happen
-			if ($scope.formData.title != undefined || formData.description != "" || formData.start_date != "" || formData.priority != "") {
+			if ($scope.formData.title != undefined || formData.description != "" || formData.start_date != "" || formData.priority != ""	) {
 				$scope.loading = true;
-
+				toaster.pop('success', 'Description=' + formData.description, 10000);
 				// call the create function from our service (returns a promise object)
 				Todos.create($scope.formData)
 
