@@ -5,6 +5,8 @@
   "main": "server.js",
   "author": "Jon Pawlowski",
   "dependencies": {
+    "angularjs-datepicker": "^2.1.23",
+    "angularjs-toaster": "^2.2.0",
     "body-parser": "^1.4.3",
     "express": "^4.13.4",
     "method-override": "^2.1.3",

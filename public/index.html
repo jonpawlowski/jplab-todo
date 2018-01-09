@@ -47,11 +47,10 @@
             <hr>
         </div>
 	</div>
-</div>
+
 <!-- SET THE CONTROLLER -->
 <body ng-controller="mainController">
 	<toaster-container></toaster-container>
-	<div class="container">
 
 		        <!--FORM Todo DATA-->
         <form id="todo-form" class="col-12">
@@ -60,7 +59,7 @@
                 <!--TITLE INPUT-->
                 <div class="col-md-2 col-sm-6">
                     <label><b>Title</b></label>
-                    <input class="form-control" ng-model="formData.title" required>
+                    <input class="form-control" ng-model="formData.title" required />
                     <p class="text-danger">
                     *required
                     </p>
@@ -70,7 +69,7 @@
                 <div class="col-md-3 col-sm-6">
                     <label><b>Description</b></label>
                     <textarea  class="form-control" ng-model="formData.description" required></textarea>
-                    <p [hidden]="deskripsiInput.valid" class="text-danger">
+                    <p class="text-danger">
                     *required
                     </p>
                 </div>
@@ -82,7 +81,7 @@
 						<input ng-model="formData.start_date" type="text" required />
 					</datepicker>
 					<!--<input class="form-control" ng-model="formData.start_date" required>-->
-                    <p [hidden]="tgl_mulaiInput.valid" class="text-danger">
+                    <p class="text-danger">
                     *required
                     </p>
                 </div>
@@ -94,7 +93,7 @@
 						<input ng-model="formData.completed_date" type="text" />
 					</datepicker>
 					<!--<input class="form-control" ng-model="formData.completed_date">-->
-                    <p [hidden]="tgl_selesaiInput.valid" class="text-danger">
+                    <p class="text-danger">
                     </p>
                 </div>
 
@@ -106,7 +105,7 @@
                         <option ng-Value="2" [selected]="priority == 2">Medium</option>
                         <option ng-Value="3" [selected]="priority == 3">Low</option>
                     </select>
-                    <p [hidden]="prioritasInput.valid" class="text-danger">
+                    <p class="text-danger">
                     *required
                     </p>
                 </div>
@@ -209,7 +208,7 @@
 		<div ng-If="todos.length == '0'" class="text-center text-danger">
 			Nothing To Do!
 		</div>
-
-	</div>
+</div>	
 </body>
 </html>
+
