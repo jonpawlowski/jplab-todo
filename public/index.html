@@ -139,7 +139,7 @@
 			<div class="col-md-1">
 				<label>Status :</label>
 				<button ng-If="todo.status" class="btn btn-sm btn-success" >Done</button>
-				<button ng-If="!todo.status" class="btn btn-sm btn-danger" >In progress</button>
+				<button ng-If="!todo.status" class="btn btn-xs btn-danger" >In progress</button>
 			</div>
 			
 			<!--DATA TITLE-->
@@ -193,7 +193,7 @@
 				</div>-->
 				<div>
 					<!-- add later <button class="btn btn-sm btn-info" (click)="edit(i)"><img src='assets/edit.png'></button>-->
-					<button class="btn btn-sm btn-danger" ng-click="deleteTodo(todo._id)"><i class="fa fa-archive"></i></button>
+					<button class="btn btn-sm btn-basic" ng-click="deleteTodo(todo._id)"><i class="fa fa-archive"></i></button>
 				</div>
 			</div>
 			
