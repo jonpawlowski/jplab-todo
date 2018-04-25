@@ -42,6 +42,10 @@ module.exports = function (app) {
 
     });
 
+	app.update('/api/todos', function (req, res) {
+        // use mongoose to get all todos in the database
+        //getTodos(res);
+    });
     // delete a todo
     app.delete('/api/todos/:todo_id', function (req, res) {
         Todo.remove({
