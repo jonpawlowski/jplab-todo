@@ -52,14 +52,12 @@ angular.module('todoController', [])
 		// UPDATE ==================================================================
 		// update a todo as completed
 		$scope.updateTodo = function() {
-			$scope.loading = true;
-			Todos.update();
+			$scope.loading = false;
+			
 			// if successful update, call our get function to get all the new todos
-				.success(function(data) {
-					$scope.loading = false;
+
 					$scope.popUpdate();
-					$scope.todos = data; // assign our new list of todos
-				});
+
 		}
 		
 		// Display toaster message on successful update
