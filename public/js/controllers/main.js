@@ -55,7 +55,6 @@ angular.module('todoController', [])
 			$scope.loading = false;
 			
 			// if successful update, call our get function to get all the new todos
-//thanks
 					$scope.popUpdate();
 
 		}
