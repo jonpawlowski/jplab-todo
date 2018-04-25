@@ -151,7 +151,7 @@
 				<div class="col-md-1">
 					<label>Status :</label>
 					<button ng-If="todo.status" class="btn btn-xs btn-outline-success" >Done</button>
-					<button ng-If="!todo.status" class="btn btn-xs btn-outline-danger" ng-click="updateTodo()" >In progress</button>
+					<button ng-If="!todo.status" class="btn btn-xs btn-outline-danger" ng-click="updateTodo(todo._id)" >In progress</button>
 				</div>
 				
 				<!--DATA TITLE-->

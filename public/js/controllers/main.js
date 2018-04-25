@@ -51,7 +51,7 @@ angular.module('todoController', [])
 		
 		// UPDATE ==================================================================
 		// update a todo as completed
-		$scope.updateTodo = function() {
+		$scope.updateTodo = function(id) {
 			$scope.loading = false;
 			
 			// if successful update, call our get function to get all the new todos
