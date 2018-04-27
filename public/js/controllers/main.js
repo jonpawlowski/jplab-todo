@@ -57,11 +57,9 @@ angular.module('todoController', [])
 			Todos.update(id)
 			console.log('Id is ' + id);
 			// if successful update, call our get function to get all the new todos
-			.success(function(data) {
 				$scope.loading = false;
 				$scope.popUpdate();
-				$scope.todos = data; // assign our new list of todos
-			});
+
 
 		}
 		
