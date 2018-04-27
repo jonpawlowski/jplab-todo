@@ -55,6 +55,7 @@ angular.module('todoController', [])
 			$scope.loading = false;
 			
 			Todos.update(id)
+			console.log('Id is ' + id);
 			// if successful update, call our get function to get all the new todos
 			.success(function(data) {
 				$scope.loading = false;
