@@ -42,9 +42,9 @@ module.exports = function (app) {
 
     });
 
-	app.update('/api/todos', function (req, res) {
+	app.put('/api/todos', function (req, res) {
         // use mongoose to get all todos in the database
-		//Todo.update({ _id: req.params.todo_id }, { $set: { Status: 1 }}, callback);
+		Todo.update({ _id: req.params.todo_id }, { $set: { Status: 1 }}, callback);
         getTodos(res);
     });
 	

@@ -11,7 +11,7 @@ angular.module('todoService', [])
 				return $http.post('/api/todos', todoData);
 			},
 			update : function() {
-				return $http.post('/api/todos');
+				return $http.put('/api/todos', + id);
 			},
 			delete : function(id) {
 				return $http.delete('/api/todos/' + id);
