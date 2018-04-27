@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 module.exports = mongoose.model('Todo', {
-    Status: Number,
+    progress: Number,
 	title: String,
     description: String,
     start_date: String,
