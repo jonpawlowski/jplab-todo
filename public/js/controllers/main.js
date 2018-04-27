@@ -52,7 +52,7 @@ angular.module('todoController', [])
 		// UPDATE ==================================================================
 		// update a todo as completed
 		$scope.updateTodo = function(id) {
-			$scope.loading = false;
+			$scope.loading = true;
 			
 			Todos.update(id)
 			console.log('Id is ' + id);
