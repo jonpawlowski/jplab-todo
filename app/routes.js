@@ -44,7 +44,7 @@ module.exports = function (app) {
 
 	app.put('/api/todos', function (req, res) {
         // use mongoose to get all todos in the database
-		Todo.update({ _id: req.params.todo_id }, { $set: { Status: 1 }}, callback);
+		Todo.update({ _id: req.params.todo_id }, { $set: { progress: 1 }}, callback);
         getTodos(res);
     });
 	
