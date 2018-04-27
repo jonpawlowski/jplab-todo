@@ -12,6 +12,14 @@ function getTodos(res) {
     });
 };
 
+function getFormattedDate() {
+    var todayTime = new Date();
+    var month = format(todayTime .getMonth() + 1);
+    var day = format(todayTime .getDate());
+    var year = format(todayTime .getFullYear());
+    return month + "/" + day + "/" + year;
+}
+
 module.exports = function (app) {
 
     // api ---------------------------------------------------------------------
@@ -45,8 +53,10 @@ module.exports = function (app) {
 	app.put('/api/todos/:todo_id', function (req, res) {
         // use mongoose to get all todos in the database
 		let id = req.params.todo_id;
+		var currentDate = getFormattedDate();
 		var updateData = {
-			progress : 1
+			progress : 1,
+			completed_date : currentDate
 		}
 		console.log('todo data is ' + updateData)
 		Todo.findByIdAndUpdate(id, updateData, function(err, todo) {
