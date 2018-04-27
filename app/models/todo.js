@@ -6,5 +6,6 @@ module.exports = mongoose.model('Todo', {
     description: String,
     start_date: String,
     completed_date: String,
-    priority: Number
+    priority: Number,
+	archive: Number
 });

@@ -1,7 +1,7 @@
 var Todo = require('./models/todo');
 
 function getTodos(res) {
-    Todo.find(function (err, todos) {
+    Todo.find({ 'archive': 0, function (err, todos) {
 
         // if there is an error retrieving, send the error. nothing after res.send(err) will execute
         if (err) {
@@ -58,7 +58,6 @@ module.exports = function (app) {
 			progress : 1,
 			completed_date : currentDate
 		}
-		console.log('todo data is ' + updateData)
 		Todo.findByIdAndUpdate(id, updateData, function(err, todo) {
 			if (err)
 				res.send(err);
