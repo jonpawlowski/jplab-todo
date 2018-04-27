@@ -45,6 +45,7 @@ module.exports = function (app) {
 	app.put('/api/todos/:todo_id', function (req, res) {
         // use mongoose to get all todos in the database
 		let id = req.params.todo_id;
+		con
 		var updateData = {
 			progress : 1
 		}
