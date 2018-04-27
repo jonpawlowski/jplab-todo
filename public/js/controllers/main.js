@@ -55,12 +55,13 @@ angular.module('todoController', [])
 			$scope.loading = true;
 			
 			Todos.update(id)
-			console.log('Id is ' + id);
+			//---debugging console.log('Id is ' + id);
 			// if successful update, call our get function to get all the new todos
-				$scope.loading = false;
-				$scope.popUpdate();
-
-
+				.success(function(data) {
+					$scope.loading = false;
+					$scope.popUpdate();
+					$scope.todos = data; // assign our new list of todos
+				});
 		}
 		
 		// Display toaster message on successful update
