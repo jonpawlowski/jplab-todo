@@ -14,9 +14,9 @@ function getTodos(res) {
 
 function getFormattedDate() {
     var todayTime = new Date();
-    var month = format(todayTime .getMonth() + 1);
-    var day = format(todayTime .getDate());
-    var year = format(todayTime .getFullYear());
+    var month = todayTime.getMonth() + 1;
+    var day = todayTime.getDate();
+    var year = todayTime.getFullYear();
     return month + "/" + day + "/" + year;
 }
 
