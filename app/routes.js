@@ -12,6 +12,18 @@ function getTodos(res) {
     });
 };
 
+function getArchivedTodos(res) {
+    Todo.find({ 'archive': 1 }, function (err, todos) {
+
+        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+        if (err) {
+            res.send(err);
+        }
+
+        res.json(todos); // return all todos in JSON format
+    });
+};
+
 function getFormattedDate() {
     var todayTime = new Date();
     var month = todayTime.getMonth() + 1;
@@ -31,10 +43,16 @@ module.exports = function (app) {
 
     // create todo and send back all todos after creation
     app.post('/api/todos', function (req, res) {
-
+		var currentProgress;
+		if (req.body.completed_date === "")
+		{
+			currentProgress = 0;
+		} else {
+			currentProgress = 1;
+		}
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
-			progress: 0,
+			progress: currentProgress,
 			title: req.body.title,
 			description: req.body.description,
 			start_date: req.body.start_date,
