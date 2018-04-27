@@ -57,8 +57,7 @@ module.exports = function (app) {
 		var currentDate = getFormattedDate();
 		var updateData = {
 			progress : 1,
-			completed_date : currentDate,
-			archive : 1
+			completed_date : currentDate
 		}
 		Todo.findByIdAndUpdate(id, updateData, function(err, todo) {
 			if (err)
@@ -67,16 +66,18 @@ module.exports = function (app) {
 		});
     });
 	
-    // delete a todo
+    // archive a todo
     app.delete('/api/todos/:todo_id', function (req, res) {
-        Todo.remove({
-            _id: req.params.todo_id
-        }, function (err, todo) {
-            if (err)
-                res.send(err);
-
-            getTodos(res);
-        });
+        // use mongoose to get all todos in the database
+		let id = req.params.todo_id;
+		var updateData = {
+			archive : 1
+		}
+		Todo.findByIdAndUpdate(id, updateData, function(err, todo) {
+			if (err)
+				res.send(err);
+			getTodos(res);
+		});
     });
 
     // application -------------------------------------------------------------
