@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="css/jplab.css">
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.css" rel="stylesheet" />
+	<link href="../node_modules/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+
 	<!--<style>
 		html 					{ overflow-y:scroll; }
 		body 					{ padding-top:50px; }
@@ -31,7 +33,8 @@
 	<script src="js/core.js"></script> <!-- load our main application -->
 	<script src="js/angular-datepicker.js"></script> <!-- load the datepicker for the date fields -->
 	<script src="https://code.angularjs.org/1.2.16/angular-animate.min.js" ></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.js"></script>
+	<script src="../node_modules/angular-xeditable/dist/js/xeditable.js"></script>
 </head>
 <!--CONTAINER-->
 <div class="container">
@@ -155,7 +158,7 @@
 				</div>
 				
 				<!--DATA TITLE-->
-				<div class="col-md-2 col-sm-6">
+				<div class="col-md-2 col-sm-6" contenteditable="true">
 					<label>Title :</label>
 					<div>
 						{{todo.title}}
