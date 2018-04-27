@@ -40,6 +40,7 @@ module.exports = function (app) {
 			start_date: req.body.start_date,
 			completed_date: req.body.completed_date,
 			priority: req.body.priority,
+			archive: 0
         }, function (err, todo) {
             if (err)
                 res.send(err);
@@ -56,7 +57,8 @@ module.exports = function (app) {
 		var currentDate = getFormattedDate();
 		var updateData = {
 			progress : 1,
-			completed_date : currentDate
+			completed_date : currentDate,
+			archive : 1
 		}
 		Todo.findByIdAndUpdate(id, updateData, function(err, todo) {
 			if (err)
