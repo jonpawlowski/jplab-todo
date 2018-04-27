@@ -48,6 +48,7 @@ module.exports = function (app) {
 		var updateData = {
 			progress : 1
 		}
+		console.log('todo data is ' + updateData)
 		Todo.findByIdAndUpdate(id, updateData, function(err, todo) {
 			if (err)
 				res.send(err);
