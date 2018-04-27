@@ -44,6 +44,7 @@ module.exports = function (app) {
     // create todo and send back all todos after creation
     app.post('/api/todos', function (req, res) {
 		var currentProgress;
+		console.log("Request Completed data is " + req.body.completed_date)
 		if (req.body.completed_date === "")
 		{
 			currentProgress = 0;
