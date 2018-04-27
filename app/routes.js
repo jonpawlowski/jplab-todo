@@ -44,12 +44,11 @@ module.exports = function (app) {
     // create todo and send back all todos after creation
     app.post('/api/todos', function (req, res) {
 		var currentProgress;
-		console.log("Request Completed data is " + req.body.completed_date)
-		if (req.body.completed_date === "")
+		if (req.body.completed_date)
 		{
-			currentProgress = 0;
-		} else {
 			currentProgress = 1;
+		} else {
+			currentProgress = 0;
 		}
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
