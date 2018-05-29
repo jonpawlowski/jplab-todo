@@ -43,7 +43,7 @@
             JP Lab Todo List
             <span class="title-info">getting things done since 1980</span>
         </h2>
-        
+
         <!--ROW-->
         <div class="col-12">
             <hr>
@@ -75,7 +75,7 @@
                     *required
                     </p>
                 </div>
-				
+
 		<!--DATE STARTED INPUT-->
                 <div class="col-md-2 col-sm-6">
                     <label><b>Date Started</b></label>
@@ -111,7 +111,7 @@
                     *required
                     </p>
                 </div>
-				
+
                 <!--SUBMIT BUTTON-->
                 <div class="col-md-1">
                     <label><b>Action</b></label><br>
@@ -122,24 +122,24 @@
 
             <!-- add later <p [hidden]="showError" class="text-danger text-center"><b>There is an error</b></p>-->
 		</form>
-    
+
         <!--END OF FORM-->
-		
+
 		<!--ROW BETWEEN FORM AND DATA-->
 		<div class="col-12">
 			<hr>
 		</div>
-	
+
 		<!--Todo DATA SECTION-->
 		<div class="row col-12">
 			<div class="col-12">
 				<h4>Todo List</h4>
 			</div>
-			 <div class="col-md-1">
+			<div class="col-12">
 				<button type="submit" class="btn btn-primary" ng-click="getArchivedTodos()">Archive</button>
-             </div>
+      </div>
 		</div>
-		
+
 		<!--DATA SECTION-->
 		<div class="row">
 			<div class="col-12">
@@ -152,14 +152,14 @@
 					</div>
 				</div>
 				<div class="row col-12 list" ng-repeat="todo in todos">
-				
+
 				<!--DATA STATUS-->
 				<div class="col-md-1">
 					<label>Status :</label>
 					<button ng-If="todo.progress" class="btn btn-xs btn-outline-success" >Done</button>
 					<button ng-If="!todo.progress" class="btn btn-xs btn-outline-danger" ng-click="updateTodo(todo._id)" >In progress</button>
 				</div>
-				
+
 				<!--DATA TITLE-->
 				<div class="col-md-2 col-sm-6" contenteditable="true">
 					<label>Title :</label>
@@ -201,7 +201,7 @@
 						<div ng-if="todo.priority == '3'" class="badge badge-success">Low</div>
 					</div>
 				</div>
-				
+
 				<!--ACTION FOR DATA-->
 				<div class="col-md-1 col-sm-6">
 					<label>Action :</label>
@@ -214,12 +214,12 @@
 						<button class="btn btn-sm btn-basic" ng-click="deleteTodo(todo._id)"><i class="fa fa-archive"></i></button>
 					</div>
 				</div>
-			
+
 			<!--ROW BETWEEN OTHER DATA-->
 			<div class="col-md-12">
 				<hr>
 			</div>
-			
+
 		</div>
 
 		<!--SHOW IF DATA EMPTY-->
@@ -228,7 +228,6 @@
 		</div>
 		</div>
 		</div>
-</div>	
+</div>
 </body>
 </html>
-
