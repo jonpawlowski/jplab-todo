@@ -132,8 +132,10 @@
 
 		<!--Todo DATA SECTION-->
 		<div class="row">
-				<div class="col">
-					<h4>Todo List		</h4>
+				<div class="col-12">
+					<h4>Todo List</h4>
+				</div>
+				<div class="col-12">
 					<button type="submit" class="btn btn-primary" ng-click="getArchivedTodos()">Archive</button>
 				</div>
 		</div>
@@ -203,10 +205,6 @@
 				<!--ACTION FOR DATA-->
 				<div class="col-md-1 col-sm-6">
 					<label>Action :</label>
-					<!-- add later
-					<div>
-						<button class="btn btn-sm btn-success" (click)="">Save</button>
-					</div>-->
 					<div>
 						<!-- add later <button class="btn btn-sm btn-info" (click)="edit(i)"><img src='assets/edit.png'></button>-->
 						<button class="btn btn-sm btn-basic" ng-click="deleteTodo(todo._id)"><i class="fa fa-archive"></i></button>
