@@ -48,12 +48,12 @@ angular.module('todoController', [])
 					$scope.todos = data; // assign our new list of todos
 				});
 		};
-		
+
 		// UPDATE ==================================================================
 		// update a todo as completed
 		$scope.updateTodo = function(id) {
 			$scope.loading = true;
-			
+
 			Todos.update(id)
 			//---debugging console.log('Id is ' + id);
 			// if successful update, call our get function to get all the new todos
@@ -63,19 +63,19 @@ angular.module('todoController', [])
 					$scope.todos = data; // assign our new list of todos
 				});
 		}
-		
+
 		// Display toaster message on successful update
 		$scope.popUpdate = function() {
 			toaster.pop('success', "Success", "To Do Item Updated", 5000);
 		}
-		
+
 		// Display toaster message on successful add
 		$scope.popAdd = function() {
 			toaster.pop('success', "Success", "To Do Item Added", 5000);
 		}
-		
+
 		// Display toaster message on successful deletion
 		$scope.popDelete = function() {
-			toaster.pop('success', "Success", "To Do Item Deleted", 5000);
+			toaster.pop('success', "Success", "To Do Item Archived", 5000);
 		}
 	}]);
